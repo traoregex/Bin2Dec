@@ -7,11 +7,12 @@
     <form class="form">
       <div class="form__input">
         <input
-          (input)="getInput()"
+          (input)="getInput($event)"
           class="form__input-inner"
           type="text"
           [(ngModel)]="number"
           name="number"
+          placeholder="Type here"
         />
       </div>
 
@@ -20,6 +21,14 @@
           <label>{{ result }}</label>
         </div>
       </div>
+      <div class="error" *ngIf="alert">
+        <div class="error__bar"></div>
+        <div class="error__icon">
+          <label class="error__icon--symbol">!</label>
+        </div>
+        <div class="error__message">{{ alert }}</div>
+      </div>
     </form>
   </div>
+  <div class="footer">Designed by Lionel Traore</div>
 </div>

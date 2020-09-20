@@ -9,13 +9,28 @@ export class AppComponent {
   title = 'bin2dec';
   number: string;
   result: string;
+  alert: string;
+  lastValue: string;
 
-  getInput(): void {
-    if (!this.number) {
-      this.result = '';
-    } else if (this.number.length <= 8 && this.number.length >= 1) {
-      this.result = parseInt(this.number, 2).toString();
-    }
-    console.log(this.number);
+  getInput(event: any): void {
+    const value = event.target.value;
+    setTimeout(() => {
+      if (
+        value.charAt(value.length - 1) === '0' ||
+        value.charAt(value.length - 1) === '1' ||
+        value.charAt(value.length - 1) === ''
+      ) {
+        this.number = value;
+        this.lastValue = value;
+        this.result = this.number ? parseInt(this.number, 2).toString() : '0';
+        this.alert = '';
+      } else {
+        this.number = this.lastValue;
+        this.alert = 'Enter 0 or 1 please';
+        setTimeout(() => {
+          this.alert = '';
+        }, 3000);
+      }
+    });
   }
 }

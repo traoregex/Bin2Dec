@@ -75,3 +75,63 @@
     letter-spacing: 10px;
   }
 }
+
+.error {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: 100px;
+  width: 80%;
+  background-color: #fff5d9;
+  margin-top: 50px;
+  border-radius: 6px;
+  box-shadow: 0 0 4px 10px rgba($color: #e0e0e0, $alpha: 0.2);
+  animation-name: expand;
+  animation-duration: 0.2s;
+
+  &__bar {
+    width: 4px;
+    height: 100%;
+    background-color: #f25a5a;
+    margin-right: 20px;
+  }
+
+  &__icon {
+    &--symbol {
+      font-size: x-large;
+      padding: 10px;
+      border-radius: 100%;
+      display: block;
+      text-align: center;
+      color: #fff;
+      height: 25px;
+      width: 25px;
+      background-color: #f25a5a;
+    }
+  }
+
+  &__message {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  width: 10vw;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba($color: #777, $alpha: 0.2);
+}
+
+@keyframes expand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
