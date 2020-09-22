@@ -117,21 +117,6 @@
   }
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  padding: 20px;
-  width: 10vw;
-  text-align: center;
-  width: 100%;
-  box-sizing: border-box;
-  background-color: rgba($color: #777, $alpha: 0.2);
-
-  &__container {
-    position: relative;
-  }
-}
-
 @keyframes expand {
   from {
     width: 0;
