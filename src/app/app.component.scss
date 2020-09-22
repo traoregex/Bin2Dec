@@ -125,3 +125,24 @@
     width: 80%;
   }
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .form {
+    width: 98%;
+    height: 300px;
+
+    &__input {
+      width: 80%;
+    }
+  }
+
+  .form-wrapper {
+    margin-top: 50px;
+  }
+
+  .screen,
+  .error {
+    height: 60px;
+  }
+}
